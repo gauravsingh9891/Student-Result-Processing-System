@@ -33,3 +33,16 @@ Status bit default 1
 
 Select * from Programme
 
+/*Subject Entity*/
+Create Table Subject
+(
+Subject_ID varchar(50) primary key,	
+Subject_Name varchar(100) not null,	
+Semester int not null check(Semester>0),
+Programme_ID varchar(50) references Programme(Programme_ID),
+Exam_Fee int default 250,
+Status bit default 1
+)
+
+Select * From Subject
+
