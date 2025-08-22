@@ -46,3 +46,16 @@ Status bit default 1
 
 Select * From Subject
 
+/* Department Entity*/
+Create Table Department
+(
+Dept_ID varchar(20) Primary key,
+Dept_Name varchar(100) not null,
+Dean varchar(80) not null,
+Contact_No varchar(100) not null,
+Status bit default 1
+)
+
+Select * From Department
+
+
