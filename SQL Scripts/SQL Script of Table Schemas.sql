@@ -58,4 +58,15 @@ Status bit default 1
 
 Select * From Department
 
+/* Faculty Entity*/
+Create Table Faculty
+(
+ Faculty_ID VARCHAR(20) Primary Key,
+ Name varchar(50) not null check(Len(Name)>3),
+ Designation Varchar(60) not null,
+ Dept_Id varchar(20) references Department(Dept_Id),
+ Contact_No varchar(30) not null,
+ Status bit default 1
+)
 
+Select * From Faculty
