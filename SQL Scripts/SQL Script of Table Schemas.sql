@@ -70,3 +70,21 @@ Create Table Faculty
 )
 
 Select * From Faculty
+
+
+/* Student Entity */
+Create Table Student
+(
+	Student_Id Varchar(10) Primary Key Check(Len(Student_ID)=9 OR Len(Student_ID)=10),
+	Name Varchar(50) Not Null,
+	DOB Date Not Null Check(DateDiff(YY,DOB,Format(Getdate(),'yyyy-MM-dd'))>15),
+	Gender Char(1) Check(Gender IN ('M','F','T')),
+	Email varchar(30),
+	Phone varchar(14) Unique,
+	Address varchar(300) Not Null,
+	Programme_ID varchar(50) references Programme(Programme_ID),
+	DOA Date default Getdate(),
+	Status bit default 1
+)
+
+Select * From Student
