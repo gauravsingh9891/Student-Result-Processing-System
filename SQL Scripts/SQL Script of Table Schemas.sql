@@ -151,3 +151,16 @@ Create Table Exam_Registration
 )
 
 Select * From Exam_Registration
+
+/* Registration Entity */
+Create Table Registration
+(
+ Reg_ID Varchar(43) Primary Key,
+ Enrollment_No Varchar(10) references Student(Enrollment_No),
+ Programme_ID varchar(50) references Programme(Programme_ID),
+ DOR Date Default Getdate(),
+ Semester Numeric(1) Not Null Check(Semester>0 And Semester<=6),
+ Payment_ID Varchar(23) references Payment(Payment_ID),
+)
+
+Select * From Registration
