@@ -76,7 +76,7 @@ Select * From Faculty
 /* Student Entity */
 Create Table Student
 (
-	Student_Id Varchar(10) Primary Key Check(Len(Student_ID)=9 OR Len(Student_ID)=10),
+	Enrollment_No Varchar(10) Primary Key Check(Len(Enrollment_No)=9 OR Len(Enrollment_No)=10),
 	Name Varchar(50) Not Null,
 	DOB Date Not Null Check(DateDiff(YY,DOB,Format(Getdate(),'yyyy-MM-dd'))>15),
 	Gender Char(1) Check(Gender IN ('M','F','T')),
@@ -114,3 +114,10 @@ Max_Marks Tinyint Check(Max_Marks IN (50,100))
 )
 
 Select * From Assignment
+
+/* Assignment_Result Entity */
+Create Table Assignment_Result
+(
+ Assignment_ID Varchar(35) references Assignment(Assignment_ID),
+
+)
