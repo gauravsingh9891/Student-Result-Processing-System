@@ -164,3 +164,24 @@ Create Table Registration
 )
 
 Select * From Registration
+
+
+--Creating Sequenc for Grade_Id
+CREATE Sequence Grade_Seq
+Start with 1
+Increment By 1
+MAXVALUE 6
+MINVALUE 1
+CYCLE
+
+/* Grading_System Entity */
+Create Table Grading_System
+(
+Grade_ID Varchar(4) Default 'GD-'+Cast((Next Value For Grade_Seq) AS Varchar),
+Grade Char(1) Check(Grade Between 'A' And 'F') Not Null,
+Description Varchar(15) Not Null,
+Min_Marks Tinyint Not Null CHECK(Min_Marks>=0),
+Max_Marks Tinyint Not Null CHECK(Max_Marks>0)
+)
+
+Select * From Grading_System
