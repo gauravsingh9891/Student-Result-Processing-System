@@ -89,3 +89,16 @@ Create Table Student
 )
 
 Select * From Student
+
+/*Exam Entity*/
+Create Table Exam
+(
+ Exam_ID Varchar(17) Primary Key,
+ Exam_Type Varchar(10) Check(Exam_Type IN ('Term-End','Assignment','Practical')),
+ Date date not null,
+ Semester Numeric(1) Check(Semester>0 AND Semester<=6),
+ Session Varchar(8) not null CHECK(Session IN ('June','DECEMBER')),
+ Programme_ID varchar(50) references Programme(Programme_ID)
+)
+
+Select * From Exam
