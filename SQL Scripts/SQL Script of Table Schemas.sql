@@ -139,3 +139,15 @@ P_Status Varchar(20) Check(P_Status IN ('Pending','Paid','Cancelled'))
 )
 
 Select * From Payment
+
+/*Exam_Registration Entity*/
+Create Table Exam_Registration
+(
+ ExamReg_ID Varchar(35) Primary Key,
+ Enrollment_No Varchar(10) references Student(Enrollment_No),
+ Exam_ID Varchar(17) references Exam(Exam_ID),
+ Subject_ID varchar(50) references Subject(Subject_ID),
+ Payment_ID Varchar(23) references Payment(Payment_ID),
+)
+
+Select * From Exam_Registration
