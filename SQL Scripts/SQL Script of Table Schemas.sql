@@ -119,5 +119,10 @@ Select * From Assignment
 Create Table Assignment_Result
 (
  Assignment_ID Varchar(35) references Assignment(Assignment_ID),
-
+ Enrollment_No Varchar(10) references Student(Enrollment_No),
+ Faculty_ID VARCHAR(20) references Faculty(Faculty_ID),
+ Marks_Obtained Tinyint Not Null Check(Marks_Obtained<=100),
+ Submission_Date Date Not Null
 )
+
+Select * From Assignment_Result
