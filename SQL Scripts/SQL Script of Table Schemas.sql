@@ -102,3 +102,15 @@ Create Table Exam
 )
 
 Select * From Exam
+
+/* Assignment Entity */
+Create Table Assignment
+(
+Assignment_ID Varchar(35) Primary Key,
+Subject_ID varchar(50) references Subject(Subject_ID),
+Assignment_Type Varchar(10) CHECK(Assignment_Type IN ('Assignment', 'Project')),
+LastSubmission_Date Date Not Null,
+Max_Marks Tinyint Check(Max_Marks IN (50,100))
+)
+
+Select * From Assignment
