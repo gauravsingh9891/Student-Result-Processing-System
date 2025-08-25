@@ -185,3 +185,17 @@ Max_Marks Tinyint Not Null CHECK(Max_Marks>0)
 )
 
 Select * From Grading_System
+
+/* Result Entity */
+Create Table Result
+(
+Result_ID Varchar(31) Primary Key,
+Enrollment_No Varchar(10) references Student(Enrollment_No),
+Exam_ID Varchar(17) references Exam(Exam_ID),
+Subject_ID varchar(50) references Subject(Subject_ID),
+Faculty_ID VARCHAR(20) references Faculty(Faculty_ID),
+Marks tinyint Check(Marks>0),
+Grade char(1) Check( Grade Between 'A' And 'F') Not Null
+)
+
+Select * From Result
