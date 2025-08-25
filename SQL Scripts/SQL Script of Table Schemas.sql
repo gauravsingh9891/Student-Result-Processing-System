@@ -177,7 +177,7 @@ CYCLE
 /* Grading_System Entity */
 Create Table Grading_System
 (
-Grade_ID Varchar(4) Default 'GD-'+Cast((Next Value For Grade_Seq) AS Varchar),
+Grade_ID Varchar(4) Primary Key Default 'GD-'+Cast((Next Value For Grade_Seq) AS Varchar),
 Grade Char(1) Check(Grade Between 'A' And 'F') Not Null,
 Description Varchar(15) Not Null,
 Min_Marks Tinyint Not Null CHECK(Min_Marks>=0),
