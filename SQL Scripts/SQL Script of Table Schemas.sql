@@ -126,3 +126,16 @@ Create Table Assignment_Result
 )
 
 Select * From Assignment_Result
+
+/* Payment Entity */
+Create Table Payment
+(
+Payment_ID Varchar(23) Primary Key,
+AccHolder_Name Varchar(50) Not Null,
+Amount Smallmoney Not Null Check(Amount>0),
+P_Mode Varchar(30) Not Null,
+P_DateTime DateTime default Getdate(),
+P_Status Varchar(20) Check(P_Status IN ('Pending','Paid','Cancelled'))
+)
+
+Select * From Payment
