@@ -24,6 +24,7 @@ Create Table Programme
 Programme_ID Varchar(50) Primary Key,
 Programme_Name varchar(100) not null,
 Level varchar(50) not null,
+Programme_Code int identity(1,1),
 Duration varchar(30) not null,
 Total_Semester int not null check(Total_Semester>0),
 Medium varchar(30) not null,
