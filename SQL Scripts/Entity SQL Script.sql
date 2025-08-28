@@ -1,4 +1,7 @@
+--Creating database
 Create database College_DB
+
+--Using database
 Use College_DB
 
 -- Students Table
