@@ -16,10 +16,8 @@ Begin
 	Declare @SID Varchar(10)
 	Exec SP_GetEnrollmentNo @EnrollmentYear,@Course_Name,@SID OUTPUT
 	Begin Try
-	Begin Transaction
 		Insert Into Students(StudentID,FullName,DOB,Gender,Contact_No,Email_ID,EnrollmentYear,Programme_ID) 
 		Values(@SID,@Student_Name,@DOB,@Gender,@Contact_No,@Email_ID,@EnrollmentYear,@Course_Name)
-	Commit Transaction
 		Print 'You have successfully enrolled for the course, and your Student Id is : '+@SID
 	End Try
 	Begin Catch
@@ -27,4 +25,4 @@ Begin
 	End Catch
 End
 
-Exec SP_InsertStudent 'BCA','Zeel','1996/03/26','F','7528697512','Shah.Zeel@gmail.com','2025'
+Exec SP_InsertStudent 'BAG','Sita','1995/03/26','F','9628697512','Sit@gmail.com','2025'
