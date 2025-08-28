@@ -40,7 +40,7 @@ Begin
 
 	--Logic To Generate 10 Digit Enrollment Number
 	DECLARE @LastSeq int
-	SET @LastSeq=Cast((SELECT ISNULL(Max(CAST(Right(StudentID,6) AS int)),0) From Students Where Left(StudentID,4)='2504') As int)
+	SET @LastSeq=Cast((SELECT ISNULL(Max(CAST(Right(StudentID,6) AS int)),0) From Students Where Left(StudentID,4)=@Prefix) As int)
 	SET @LastSeq=@LastSeq+1
 	SET @NewEnrollNo=(@Prefix+Right('00000'+Cast(@LastSeq AS Varchar),6))
 End
