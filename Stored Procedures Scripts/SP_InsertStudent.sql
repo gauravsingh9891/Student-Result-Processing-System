@@ -27,4 +27,4 @@ Begin
 	End Catch
 End
 
-Exec SP_InsertStudent 'MCA','Zeeshan','2002/05/19','M','8523697412','Zessahn@gmail.com','2025'
+Exec SP_InsertStudent 'BCA','Zeel','1996/03/26','F','7528697512','Shah.Zeel@gmail.com','2025'
