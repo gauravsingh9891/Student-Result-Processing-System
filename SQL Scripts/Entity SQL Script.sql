@@ -74,6 +74,5 @@ CREATE TABLE Grades (
     Subject_ID varchar(50) REFERENCES Subject(Subject_ID),
     MarksObtained DECIMAL(5,2),
     Grade CHAR(2),
-    GradePoint DECIMAL(3,2)
+    GradePoint DECIMAL(3,1)
 );
-
