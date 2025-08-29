@@ -76,3 +76,11 @@ CREATE TABLE Grades (
     Grade CHAR(2),
     GradePoint DECIMAL(3,1)
 );
+
+-- GPA Table
+CREATE TABLE GPA (
+    StudentID Varchar(10) REFERENCES Students(StudentID),
+    SemesterID INT references Semesters(SemesterID),
+    GPA DECIMAL(4,2),
+    PRIMARY KEY (StudentID, SemesterID)
+);
