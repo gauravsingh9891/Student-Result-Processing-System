@@ -58,14 +58,22 @@ Programme_ID varchar(50) references Programme(Programme_ID),
 Status bit default 1
 )
 
+--Creating Sequence for Auto-generated Grade ID
 Select * From Subject
+Create Sequence Grade_Seq
+Start With 1
+Increment By 1
+Maxvalue 999999
+Minvalue 1
+Cycle
 
 -- Grades Table
 CREATE TABLE Grades (
-    GradeID INT PRIMARY KEY IDENTITY,
+    GradeID Varchar(6) PRIMARY KEY Default 'GD-'+Right('0'+Cast((Next Value for Grade_Seq) as Varchar),2),
     StudentID Varchar(10) REFERENCES Students(StudentID),
     Subject_ID varchar(50) REFERENCES Subject(Subject_ID),
     MarksObtained DECIMAL(5,2),
     Grade CHAR(2),
     GradePoint DECIMAL(3,2)
 );
+
