@@ -77,6 +77,10 @@ CREATE TABLE Grades (
     GradePoint DECIMAL(3,1)
 );
 
+--Applying Composite of Unique Index on both StudentID,Subject_ID to avoid entering duplicate record if student is pass in a subject 
+Create Unique Index UQ_StudentID_SubjectID ON Grades(StudentID,Subject_ID) Where GradePoint>=5.0
+
+--View  the table
 Select * From Grades
 
 -- GPA Table
@@ -86,3 +90,6 @@ CREATE TABLE GPA (
     GPA DECIMAL(4,2),
     PRIMARY KEY (StudentID, SemesterID)
 );
+
+--View the GPA Table
+Select * From GPA
