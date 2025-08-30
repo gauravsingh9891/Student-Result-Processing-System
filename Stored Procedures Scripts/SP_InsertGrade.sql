@@ -87,7 +87,6 @@ Begin
 End 
 
 --Executing Stored Procedure
-
 /* For BCA Course */
 --Semester 1
 Execute SP_InsertGrade '2504000001','BCS-011',95
@@ -168,7 +167,6 @@ Execute SP_InsertGrade '2512000001','MCSL-229',80
 Execute SP_InsertGrade '2512000001','MCS-230',70
 Execute SP_InsertGrade '2512000001','MCS-231',71
 Execute SP_InsertGrade '2512000001','MCSP-232',74
-
 
 /*Adding anothor Student Grade of BCA*/
 --Semester 1
