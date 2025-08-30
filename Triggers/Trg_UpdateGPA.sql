@@ -7,7 +7,7 @@
 */
 Create OR Alter Trigger Trg_UpdateGPA
 ON Grades
-AFTER Insert,Update
+AFTER Insert,Update,delete
 As
 Begin
 	SET NOCOUNT ON;
