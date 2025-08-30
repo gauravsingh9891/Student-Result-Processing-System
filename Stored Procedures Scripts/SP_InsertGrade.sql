@@ -19,8 +19,8 @@ Begin
 	Begin
 
 		--Declaring the variables to checking the Course entered for a program is valid or not
-		Declare @Stud_Prog Varchar(10)=(Select Programme_ID From Students Where StudentID=@StudentID)
-		Declare @Entered_CourseProg Varchar(10)=(Select Programme_ID From Subject Where Subject_ID=@Subject_ID)
+		Declare @Stud_Prog Varchar(10)=(Select Programme_ID From Students Where StudentID=@StudentID And Status=1)
+		Declare @Entered_CourseProg Varchar(10)=(Select Programme_ID From Subject Where Subject_ID=@Subject_ID And Status=1)
 		
 		--If Valid Course then recording will inserted
 		IF(@Stud_Prog=@Entered_CourseProg)
@@ -138,7 +138,6 @@ Execute SP_InsertGrade '2504000001','BCSL-057',87
 --Semester 6
 Execute SP_InsertGrade '2504000001','BCS-061',97
 
-
 /*For MCA Course*/
 --Semester 1
 Execute SP_InsertGrade '2512000001','MCS-211',74
@@ -171,3 +170,50 @@ Execute SP_InsertGrade '2512000001','MCS-231',71
 Execute SP_InsertGrade '2512000001','MCSP-232',74
 
 
+/*Adding anothor Student Grade of BCA*/
+--Semester 1
+Execute SP_InsertGrade '2504000002','BCS-011',70
+Execute SP_InsertGrade '2504000002','BCS-012',71
+Execute SP_InsertGrade '2504000002','BCSL-013',65
+Execute SP_InsertGrade '2504000002','ECO-01',42
+Execute SP_InsertGrade '2504000002','FEG-02',37
+
+--Semester 2
+Execute SP_InsertGrade '2504000002','BCSL-021',42
+Execute SP_InsertGrade '2504000002','BCSL-022',48
+Execute SP_InsertGrade '2504000002','ECO-02',76
+Execute SP_InsertGrade '2504000002','MCS-011',40
+Execute SP_InsertGrade '2504000002','MCS-012',50
+Execute SP_InsertGrade '2504000002','MCS-013',72
+Execute SP_InsertGrade '2504000002','MCS-015',80
+
+--Semester 3
+Execute SP_InsertGrade '2504000002','BCS-031',81
+Execute SP_InsertGrade '2504000002','BCSL-032',60
+Execute SP_InsertGrade '2504000002','BCSL-033',62
+Execute SP_InsertGrade '2504000002','BCSL-034',69
+Execute SP_InsertGrade '2504000002','MCS-014',55
+Execute SP_InsertGrade '2504000002','MCS-021',56
+Execute SP_InsertGrade '2504000002','MCS-023',71
+
+--Semester 4
+Execute SP_InsertGrade '2504000002','BCS-040',49
+Execute SP_InsertGrade '2504000002','BCS-041',75
+Execute SP_InsertGrade '2504000002','BCS-042',36
+Execute SP_InsertGrade '2504000002','BCSL-043',40
+Execute SP_InsertGrade '2504000002','BCSL-044',59
+Execute SP_InsertGrade '2504000002','BCSL-045',73
+Execute SP_InsertGrade '2504000002','MCS-024',90
+Execute SP_InsertGrade '2504000002','MCSL-016',91
+
+----Semester 5
+Execute SP_InsertGrade '2504000002','BCS-051',72
+Execute SP_InsertGrade '2504000002','BCS-052',65
+Execute SP_InsertGrade '2504000002','BCS-053',81
+Execute SP_InsertGrade '2504000002','BCS-054',76
+Execute SP_InsertGrade '2504000002','BCS-055',52
+Execute SP_InsertGrade '2504000002','BCSL-056',41
+Execute SP_InsertGrade '2504000002','BCSL-057',51
+
+--Semester 6
+Execute SP_InsertGrade '2504000002','BCS-061',89
