@@ -25,4 +25,6 @@ Begin
 	End Catch
 End
 
+--Executing Procedure
 Exec SP_InsertStudent 'BAG','Sita','1995/03/26','F','9628697512','Sit@gmail.com','2025'
+Exec SP_InsertStudent 'BCA','Arsh','2002/06/19','M','+919517538526','Arsh12@gmail.com','2025'
