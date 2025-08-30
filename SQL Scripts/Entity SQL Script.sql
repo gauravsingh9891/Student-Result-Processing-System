@@ -77,6 +77,8 @@ CREATE TABLE Grades (
     GradePoint DECIMAL(3,1)
 );
 
+Select * From Grades
+
 -- GPA Table
 CREATE TABLE GPA (
     StudentID Varchar(10) REFERENCES Students(StudentID),
