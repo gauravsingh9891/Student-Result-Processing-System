@@ -3,8 +3,6 @@
 ## Abstract
 The Student Result Processing System is a comprehensive SQL-based academic management solution designed to automate and streamline the process of calculating, storing, and reporting student grades and GPAs. The system implements advanced database concepts including stored procedures, triggers, window functions, and complex queries to provide real-time GPA calculations, automated ranking systems, and comprehensive result reporting. Built using Microsoft SQL Server 2022, the system demonstrates robust data validation, efficient grade processing, and flexible reporting capabilities suitable for educational institutions of various scales.
 
----
-
 ## Introduction
 Educational institutions face significant challenges in managing student academic records, calculating GPAs, and generating comprehensive reports. Traditional manual processes are error-prone, time-consuming, and lack the flexibility required for modern academic management. This project addresses these challenges by developing a comprehensive Student Result Processing System that automates grade calculations, GPA computations, and result reporting.
          The system is designed with scalability and flexibility in mind, supporting multiple academic programs, semesters, and subjects while maintaining data integrity through comprehensive validation rules and automated triggers. The implementation showcases advanced SQL Server features including stored procedures for business logic encapsulation, triggers for automatic GPA updates, window functions for ranking calculations, and complex queries for comprehensive reporting.
@@ -16,8 +14,6 @@ Key objectives achieved include:
          - Flexible ranking system supporting multiple scenarios
          - Comprehensive result reporting and data export capabilities
          - Robust data validation and integrity constraints
-
----
 
 ## Tools Used
 
@@ -58,12 +54,14 @@ Key objectives achieved include:
    <b><i>SP_GetEnrollmentNo</i></b>
 
 		Used to generate unique 10 digit numberic student id. It requires Admission Date, Programme/Course Name.
+
 		Ex:- Execute SP_GetEnrollmentNo '2025/09/01','BCA'
    
    <b><i>SP_InsertStudent</i></b>
 
    		Used to insert record with validation student. It requires Course Name, Student Name, Date of Birth,Gender, Contact Number,Email ID,
    		Enrollment Year and it will return confirmation message along with 10 digit student id.
+   
 		Ex:- Execute SP_InsertStudent 'BAG','Sita','1995/03/26','F','9628697512','Sit@gmail.com','2025'
 
    <b><i>SP_GetCourseSubject</i></b>
@@ -96,6 +94,7 @@ Key objectives achieved include:
 
    			Used for checking the statistic of Student Who is enrolled for a course given exam. This will take student id as input and
    			tells you in which subject semester wise you are Pass or Fail based on there Grades points. It required only student ID.
+   
    			Ex:- Execute SP_GetSemesterResult '2504000001'
    
 3. **Grade Processing**: Created following procedure
@@ -105,6 +104,7 @@ Key objectives achieved include:
    		Used for insert/enter comprehensive grade records in Grades Table with Grade point calculation based on marks,
    		Letter grade assignment, and Duplicate prevention for passed subjects. It required Student ID, Subject Id and
    		Marks that student obtained in subject crossponding to course/program.
+   
 		Ex:- Execute SP_InsertGrade '2504000001','BCS-011',95
    		
 5. **Programme Management**: Established academic program structure with semester mapping
@@ -117,6 +117,7 @@ Key objectives achieved include:
    <b><i>SP_GPA</i></b>
 
    		used to View the GPA of a crossponding Student ID all semester wises. It requires Student ID
+   
    		Ex:- Execute SP_GPA '2504000001'
    
 5. **Real-time Updates**: Ensured automatic GPA recalculation on grade changes
@@ -133,19 +134,19 @@ Key objectives achieved include:
   		Used to find the rank based on GPA and Gross GPA. It requires Course ID, Semester Number, and IsRankGrossGPA='y'
         to rank based on gross all semester rank between all course
 
-	i) Rank based on Course in all semester wise [By Passing Only Course Name as parameter]
+   i) Rank based on Course in all semester wise [By Passing Only Course Name as parameter]
 
   		Ex:- Execute SP_GetRank 'BCA'
 
-   ii) Rank based on specific Course and semeter wise [By Passing Only Course Name and Semester as parameter]
+  ii) Rank based on specific Course and semeter wise [By Passing Only Course Name and Semester as parameter]
 
    		Ex:- Execute SP_GetRank 'BCA',1
    
-  iii) Rank based on specific semeter for all courses of all students [By Passing Only Semester as parameter]
+ iii) Rank based on specific semeter for all courses of all students [By Passing Only Semester as parameter]
 
   		Ex:- Execute SP_GetRank Null,1
 
-   iv) Rank Specific Course Students based on Average GPA in there particular course/programme [By Passing Course Name & in @IsRankGrossGPA value 'y'  as parameter]
+  iv) Rank Specific Course Students based on Average GPA in there particular course/programme [By Passing Course Name & in @IsRankGrossGPA value 'y'  as parameter]
 
    		Ex:- Execute SP_GetRank 'BCA',Null,'y'
 
@@ -160,6 +161,7 @@ Key objectives achieved include:
 		used to get the result summary of all students of all course at a time. It will display Name of  Student, Student ID, Course Name,
 		Semester wise [Subject Name, Marks obtained, Grades, Grades Point, Result :Pass/Fail,GPA] for all student. It does not required any
 		parameter.
+
   		Ex:- Execute SP_GetSemResultSummary
 
 ### Phase 5: Data Validation and Testing
