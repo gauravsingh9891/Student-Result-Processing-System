@@ -87,31 +87,7 @@ Key objectives achieved include:
 2. **Data Validation**: Documented table contents and relationships
 
 ---
-## Conclusion
-
-The Student Result Processing System successfully demonstrates the implementation of a comprehensive academic management solution using advanced SQL Server features. The project achieves all stated objectives including automated GPA calculation, flexible ranking systems, comprehensive reporting, and robust data validation.
-
-### Key Achievements
-- **Automation**: Eliminated manual GPA calculations through intelligent triggers
-- **Flexibility**: Supported multiple ranking scenarios and reporting formats
-- **Reliability**: Implemented comprehensive data validation and integrity constraints
-- **Scalability**: Designed modular architecture supporting multiple programs and semesters
-- **Performance**: Optimized queries and indexes for efficient data processing
-
-### Technical Excellence
-The project showcases mastery of advanced SQL concepts including stored procedures, triggers, window functions, and complex query optimization. The implementation demonstrates best practices in database design, data integrity, and system architecture.
-
-### Business Value
-The system provides significant value to educational institutions by:
-- Reducing administrative workload through automation
-- Improving accuracy in grade calculations and reporting
-- Enabling flexible and comprehensive academic analysis
-- Supporting data-driven decision making through detailed reporting
-
-This project serves as a robust foundation for academic management systems and demonstrates the power of modern SQL Server features in building enterprise-grade educational software solutions.
-
-## ER Diagram (Mermaid Syntax)
-
+## ER Diagram
 ```mermaid
 ---
 config:
@@ -178,3 +154,25 @@ erDiagram
 	Semesters||--o{GPA:"used in"
 	Subject||--o{Grades:"graded in"
 ```
+## Conclusion
+
+The Student Result Processing System successfully demonstrates the implementation of a comprehensive academic management solution using advanced SQL Server features. The project achieves all stated objectives including automated GPA calculation, flexible ranking systems, comprehensive reporting, and robust data validation.
+
+### Key Achievements
+- **Automation**: Eliminated manual GPA calculations through intelligent triggers
+- **Flexibility**: Supported multiple ranking scenarios and reporting formats
+- **Reliability**: Implemented comprehensive data validation and integrity constraints
+- **Scalability**: Designed modular architecture supporting multiple programs and semesters
+- **Performance**: Optimized queries and indexes for efficient data processing
+
+### Technical Excellence
+The project showcases mastery of advanced SQL concepts including stored procedures, triggers, window functions, and complex query optimization. The implementation demonstrates best practices in database design, data integrity, and system architecture.
+
+### Business Value
+The system provides significant value to educational institutions by:
+- Reducing administrative workload through automation
+- Improving accuracy in grade calculations and reporting
+- Enabling flexible and comprehensive academic analysis
+- Supporting data-driven decision making through detailed reporting
+
+This project serves as a robust foundation for academic management systems and demonstrates the power of modern SQL Server features in building enterprise-grade educational software solutions.
