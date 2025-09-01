@@ -53,9 +53,12 @@ Key objectives achieved include:
 
    <b><i>SP_GetEnrollmentNo</i></b>
 
-		Used to generate unique 10 digit numberic student id. It requires Admission Date, Programme/Course Name.
-
-		Ex:- Execute SP_GetEnrollmentNo '2025/09/01','BCA'
+		Used to generate unique 10 digit numberic student id. It requires Admission Year, Programme/Course Name and to store and display generated student id declare one Output Variable.
+			
+		Ex:- Declare @Enroll varchar(10)
+			 Execute SP_GetEnrollmentNo '2025','BCA'
+             Print @Enroll
+	<img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetEnrollmentNo%20Output.png?raw=true'>
    
    <b><i>SP_InsertStudent</i></b>
 
