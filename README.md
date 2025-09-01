@@ -75,24 +75,28 @@ Key objectives achieved include:
    
    1) Can show all Subjects of a Course of a student registered for [By Passing Only Student ID]
 
-			Ex:- Execute SP_GetCourseSubject '2504000001'
-   
+		  Ex:- Execute SP_GetCourseSubject '2504000001'
+      <img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetCourseSubject%20Passing%20Only%20Student%20ID%20Output.png?raw=true'>
+	  
    2) Particular Subjects of a Course based on Semester Number for particular Student ID [By Passing Student ID And Semester No.]
 
       		Ex:- Execute SP_GetCourseSubject '2504000001',Null,1
-   
+      <img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetCourseSubject%20Passing%20Only%20Student%20ID%20&%20Semester%20Number%20Output.png?raw=true'>
+	  
    3) Can Show All Subjects of a Course [By Passing Only Course Name]
 
       		Ex:- Execute SP_GetCourseSubject Null,'BCA'
-   
+      <img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetCourseSubject%20Passing%20Only%20Course%20Name%20Output.png?raw=true'>
+	  
    4) Can Show All Subjects of a course based on particular semester no. [By Passing Course Name And Semester Number]
 
       		EX:- Execute SP_GetCourseSubject Null,'BAG',1
-   
+      <img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetCourseSubject%20Passing%20Only%20Course%20Name%20And%20Semester%20Number%20Output.png?raw=true'>
+
    5) Can Show All Subjects of All Courses Available
    
    			Ex: - Execute SP_GetCourseSubject
-
+      <img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetCourseSubject%20Not%20Passing%20Any%20Value%20Output.png?raw=true'>
 
    <b><i>SP_GetSemeterResult</i></b>
 
@@ -100,7 +104,8 @@ Key objectives achieved include:
    			tells you in which subject semester wise you are Pass or Fail based on there Grades points. It required only student ID.
    
    			Ex:- Execute SP_GetSemesterResult '2504000001'
-   
+   	  <img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetSemesterResult%20Output.png?raw=true'>
+	  
 3. **Grade Processing**: Created following procedure
 
 	<b><i>SP_InsertGrade</i></b>
@@ -110,7 +115,8 @@ Key objectives achieved include:
    		Marks that student obtained in subject crossponding to course/program.
    
 		Ex:- Execute SP_InsertGrade '2504000001','BCS-011',95
-   		
+   	  <img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_InsertData%20into%20Grades%20Table%20output.png?raw=true'>	
+	  
 5. **Programme Management**: Established academic program structure with semester mapping
 
 ### Phase 3: GPA Calculation System
@@ -123,7 +129,8 @@ Key objectives achieved include:
    		used to View the GPA of a crossponding Student ID all semester wises. It requires Student ID
    
    		Ex:- Execute SP_GPA '2504000001'
-   
+      <img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GPA%20Output.png?raw=true'>
+
 5. **Real-time Updates**: Ensured automatic GPA recalculation on grade changes
 
 ### Phase 4: Advanced Reporting and Ranking
@@ -141,23 +148,28 @@ Key objectives achieved include:
    i) Rank based on Course in all semester wise [By Passing Only Course Name as parameter]
 
   		Ex:- Execute SP_GetRank 'BCA'
+<img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetRank%20Case%201%20Output.png?raw=true'>
 
   ii) Rank based on specific Course and semeter wise [By Passing Only Course Name and Semester as parameter]
 
-   		Ex:- Execute SP_GetRank 'BCA',1
-   
+   		Ex:- Execute SP_GetRank 'BCA',1 
+<img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetRank%20Case%202%20Output.png?raw=true'>
+
  iii) Rank based on specific semeter for all courses of all students [By Passing Only Semester as parameter]
 
   		Ex:- Execute SP_GetRank Null,1
+<img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetRank%20Case%203%20Output.png?raw=true'>
 
   iv) Rank Specific Course Students based on Average GPA in there particular course/programme [By Passing Course Name & in @IsRankGrossGPA value 'y'  as parameter]
 
    		Ex:- Execute SP_GetRank 'BCA',Null,'y'
+<img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetRank%20Case%204%20Output.png?raw=true'>
 
    v) Rank All Course Students based on Average GPA in there particular course/programme [By Passing @IsRankGrossGPA value 'y'  as parameter]
 
 		Ex:- Execute SP_GetRank Null,Null,'y'
-  
+<img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetRank%20Case%205%20Output.png?raw=true'>
+
 3. **Result Summaries**: Created SP_GetSemResultSummary for comprehensive reporting.
 
 	<b><i>SP_GetSemResultSummary</i><b>
@@ -167,6 +179,7 @@ Key objectives achieved include:
 		parameter.
 
   		Ex:- Execute SP_GetSemResultSummary
+<img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetSemResultSummary%20Output.png?raw=true'>
 
 ### Phase 5: Data Validation and Testing
 1. **Test Data Population**: Inserted comprehensive test data across all entities
