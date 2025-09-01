@@ -2,20 +2,20 @@
   Purpose:- Stored Procedure is used to create "Student 10 Digit Enrollment Number"
   ----------------------------------------------------------------------------------
   Name of Stored Procedure => SP_GetEnrollmentNo
-  Required Parameters => Admission Date, Programme Name
+  Required Parameters => Admission Year, Programme Name
   Returns => 10 Digit Enrollment Number
 */
 Create OR  Alter Procedure SP_GetEnrollmentNo
-@Admission_DT varchar(4),
+@Admission_Year varchar(4),
 @Programme Varchar(10),
 @NewEnrollNo Varchar(10) OUTPUT
 AS
 Begin
 
 	--Logic to get last 2 digit of year
-	IF(@Admission_DT IS NOT NULL)
+	IF(@Admission_Year IS NOT NULL)
 	Begin
-		Declare @YearCode varchar(2)=Right(@Admission_DT,2)
+		Declare @YearCode varchar(2)=Right(@Admission_Year,2)
 	End
 	Else
 	Begin
