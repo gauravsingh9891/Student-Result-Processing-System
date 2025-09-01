@@ -66,7 +66,8 @@ Key objectives achieved include:
    		Enrollment Year and it will return confirmation message along with 10 digit student id.
    
 		Ex:- Execute SP_InsertStudent 'BAG','Sita','1995/03/26','F','9628697512','Sit@gmail.com','2025'
-
+    <img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_InsertStudent%20Output.png?raw=true'>
+	
    <b><i>SP_GetCourseSubject</i></b>
 
    		Student can view the subjectes based on registered course or without registered also. It can requires Student ID, Course Name, Semester Number
