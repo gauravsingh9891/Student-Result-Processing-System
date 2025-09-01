@@ -56,37 +56,52 @@ Key objectives achieved include:
 ### Phase 2: Core Data Management
 1. **Student Management**: Created following Stored Procedures
 
-   		<b><i>SP_GetEnrollmentNo</i></b> => Used to generate unique 10 digit numberic student id. It requires Admission Date, Programme/Course Name.
-   										Ex:- Execute SP_GetEnrollmentNo '2025/09/01','BCA'
-   
-   		<b><i>SP_InsertStudent</i></b> => Used to insert record with validation student. It requires Course Name, Student Name, Date of Birth,Gender,
-   									      Contact Number,Email ID, Enrollment Year and it will return confirmation message along with 10 digit student id.
-										Ex:- Execute SP_InsertStudent 'BAG','Sita','1995/03/26','F','9628697512','Sit@gmail.com','2025'
+   <b><i>SP_GetEnrollmentNo</i></b>
 
-   		<b><i>SP_GetCourseSubject</i></b> => Student can view the subjectes based on registered course or without registered also. It can requires Student ID,
-   										      Course Name, Semester Number based on following senario :-
+		Used to generate unique 10 digit numberic student id. It requires Admission Date, Programme/Course Name.
+		Ex:- Execute SP_GetEnrollmentNo '2025/09/01','BCA'
    
-   											1) Can show all Subjects of a Course of a student registered for [By Passing Only Student ID]
-												Ex:- Execute SP_GetCourseSubject '2504000001'
+   <b><i>SP_InsertStudent</i></b>
+
+   		Used to insert record with validation student. It requires Course Name, Student Name, Date of Birth,Gender, Contact Number,Email ID,
+   		Enrollment Year and it will return confirmation message along with 10 digit student id.
+		Ex:- Execute SP_InsertStudent 'BAG','Sita','1995/03/26','F','9628697512','Sit@gmail.com','2025'
+
+   <b><i>SP_GetCourseSubject</i></b>
+
+   		Student can view the subjectes based on registered course or without registered also. It can requires Student ID, Course Name, Semester Number
+   		based on following senario :-
    
-   											2) Particular Subjects of a Course based on Semester Number for particular Student ID [By Passing Student ID And Semester No.]
-   												Ex:- Execute SP_GetCourseSubject '2504000001',Null,1
+   1) Can show all Subjects of a Course of a student registered for [By Passing Only Student ID]
+
+			Ex:- Execute SP_GetCourseSubject '2504000001'
    
-   											3) Can Show All Subjects of a Course [By Passing Only Course Name]
-   												Ex:- Execute SP_GetCourseSubject Null,'BCA'
+   2) Particular Subjects of a Course based on Semester Number for particular Student ID [By Passing Student ID And Semester No.]
+
+      		Ex:- Execute SP_GetCourseSubject '2504000001',Null,1
    
-   											4) Can Show All Subjects of a course based on particular semester no. [By Passing Course Name And Semester Number]
-												EX:- Execute SP_GetCourseSubject Null,'BAG',1
+   3) Can Show All Subjects of a Course [By Passing Only Course Name]
+
+      		Ex:- Execute SP_GetCourseSubject Null,'BCA'
    
-   											5) Can Show All Subjects of All Courses Available
-   												Ex: - Execute SP_GetCourseSubject
+   4) Can Show All Subjects of a course based on particular semester no. [By Passing Course Name And Semester Number]
+
+      		EX:- Execute SP_GetCourseSubject Null,'BAG',1
+   
+   5) Can Show All Subjects of All Courses Available
+   
+   			Ex: - Execute SP_GetCourseSubject
 			
-   		<b><i>SP_GetCourseSubject</i></b> => Used for checking the statistic of Student Who is enrolled for a course given exam. This will required student id as input
-   											and tells you in which subject semester wise you are Pass or Fail based on there Grades points.
-   										Ex:- Execute SP_GetSemesterResult '2504000001'
+   <b><i>SP_GetCourseSubject</i></b>
 
-   		<b><i>SP_GPA</i></b> => used to View the GPA of a crossponding Student ID all semester wises. It requires Student ID
-   										Ex:- Execute SP_GPA '2504000001'
+   		Used for checking the statistic of Student Who is enrolled for a course given exam. This will required student id as input and
+   		tells you in which subject semester wise you are Pass or Fail based on there Grades points.
+   			Ex:- Execute SP_GetSemesterResult '2504000001'
+
+   <b><i>SP_GPA</i></b>
+
+   		used to View the GPA of a crossponding Student ID all semester wises. It requires Student ID
+   		Ex:- Execute SP_GPA '2504000001'
    
 3. **Grade Processing**: Developed SP_InsertGrade for comprehensive grade entry with:
    - Grade point calculation based on marks
