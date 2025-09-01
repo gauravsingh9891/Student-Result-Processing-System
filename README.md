@@ -112,6 +112,7 @@ This project serves as a robust foundation for academic management systems and d
 
 ## ER Diagram (Mermaid Syntax)
 
+```mermaid
 ---
 config:
   layout: dagre
@@ -176,3 +177,4 @@ erDiagram
 	Semesters||--o{Subject:"includes"
 	Semesters||--o{GPA:"used in"
 	Subject||--o{Grades:"graded in"
+```
