@@ -188,48 +188,48 @@ erDiagram
 	direction LR
 	Students {
 		varchar StudentID PK ""  
-		string FullName  ""  
+		varchar FullName  ""  
 		date DOB  ""  
 		char Gender  ""  
-		string Contact_No  ""  
-		string Email_ID  ""  
-		string EnrollmentYear  ""  
-		string Programme_ID FK ""  
+		varchar Contact_No  ""  
+		varchar Email_ID  ""  
+		varchar EnrollmentYear  ""  
+		varchar Programme_ID FK ""  
 		bit Status  ""  
 	}
 	Programme {
-		string Programme_ID PK ""  
-		string Programme_Name  ""  
-		string Level  ""  
+		varchar Programme_ID PK ""  
+		varchar Programme_Name  ""  
+		varchar Level  ""  
 		int Programme_Code  ""  
-		string Duration  ""  
+		varchar Duration  ""  
 		int Total_Semester  ""  
-		string Medium  ""  
+		varchar Medium  ""  
 		smallmoney Fee  ""  
 		bit Status  ""  
 	}
 	Semesters {
 		int SemesterID PK ""  
-		string SemesterName  ""  
+		varchar SemesterName  ""  
 	}
 	Subject {
-		string Subject_ID PK ""  
-		string Subject_Name  ""  
+		varchar Subject_ID PK ""  
+		varchar Subject_Name  ""  
 		int SemesterID FK ""  
 		int Credits  ""  
-		string Programme_ID FK ""  
+		varchar Programme_ID FK ""  
 		bit Status  ""  
 	}
 	Grades {
-		string GradeID PK ""  
-		string StudentID FK ""  
+		varchar GradeID PK ""  
+		varchar StudentID FK ""  
 		string Subject_ID FK ""  
 		decimal MarksObtained  ""  
 		char Grade  ""  
 		decimal GradePoint  ""  
 	}
 	GPA {
-		string StudentID PK,FK ""  
+		varchar StudentID PK,FK ""  
 		int SemesterID PK,FK ""  
 		decimal GPA  ""  
 	}
