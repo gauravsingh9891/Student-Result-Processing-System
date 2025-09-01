@@ -103,14 +103,19 @@ Key objectives achieved include:
    		used to View the GPA of a crossponding Student ID all semester wises. It requires Student ID
    		Ex:- Execute SP_GPA '2504000001'
    
-3. **Grade Processing**: Developed SP_InsertGrade for comprehensive grade entry with:
-   - Grade point calculation based on marks
-   - Letter grade assignment
-   - Duplicate prevention for passed subjects
-4. **Programme Management**: Established academic program structure with semester mapping
+3. **Grade Processing**: Created following procedure
+
+	<b><i>SP_InsertGrade</i></b>
+
+   		Used for insert/enter comprehensive grade records in Grades Table with Grade point calculation based on marks,
+   		Letter grade assignment, and Duplicate prevention for passed subjects. It required Student ID, Subject Id and
+   		Marks that student obtained in subject crossponding to course/program.
+		Ex:- Execute SP_InsertGrade '2504000001','BCS-011',95
+   		
+5. **Programme Management**: Established academic program structure with semester mapping
 
 ### Phase 3: GPA Calculation System
-1. **GPA Logic Implementation**: Developed credit-weighted GPA calculation formula
+1. **GPA Logic Implementation**: Developed credit-weighted GPA calculation formula 
 2. **Trigger Development**: Created Trg_UpdateGPA trigger for automatic GPA updates
 3. **GPA Reporting**: Implemented SP_GPA for semester-wise GPA display
 4. **Real-time Updates**: Ensured automatic GPA recalculation on grade changes
