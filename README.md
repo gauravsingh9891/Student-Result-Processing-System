@@ -187,7 +187,7 @@ title: Student Result Processing System
 erDiagram
 	direction LR
 	Students {
-		string StudentID PK ""  
+		varchar StudentID PK ""  
 		string FullName  ""  
 		date DOB  ""  
 		char Gender  ""  
