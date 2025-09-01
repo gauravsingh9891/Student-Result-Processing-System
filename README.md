@@ -110,3 +110,74 @@ The system provides significant value to educational institutions by:
 
 This project serves as a robust foundation for academic management systems and demonstrates the power of modern SQL Server features in building enterprise-grade educational software solutions.
 
+## ER Diagram (Mermaid Syntax)
+
+```mermaid
+erDiagram
+    Students {
+        varchar(10) StudentID PK
+        varchar(100) FullName
+        date DOB
+        char(1) Gender
+        varchar(13) Contact_No
+        varchar(30) Email_ID
+        varchar(4) EnrollmentYear
+        varchar(50) Programme_ID FK
+        bit Status
+    }
+    
+    Programme {
+        varchar(50) Programme_ID PK
+        varchar(100) Programme_Name
+        varchar(50) Level
+        int Programme_Code
+        varchar(30) Duration
+        int Total_Semester
+        varchar(30) Medium
+        smallmoney Fee
+        bit Status
+    }
+    
+    Semesters {
+        int SemesterID PK
+        varchar(50) SemesterName
+    }
+    
+    Subject {
+        varchar(50) Subject_ID PK
+        varchar(100) Subject_Name
+        int SemesterID FK
+        int Credits
+        varchar(50) Programme_ID FK
+        bit Status
+    }
+    
+    Grades {
+        varchar(6) GradeID PK
+        varchar(10) StudentID FK
+        varchar(50) Subject_ID FK
+        decimal(5,2) MarksObtained
+        char(2) Grade
+        decimal(3,1) GradePoint
+    }
+    
+    GPA {
+        varchar(10) StudentID FK
+        int SemesterID FK
+        decimal(4,2) GPA
+    }
+    
+    %% Relationships
+    Students ||--o{ Grades : "enrolls_in"
+    Students }o--|| Programme : "belongs_to"
+    Programme ||--o{ Subject : "contains"
+    Semesters ||--o{ Subject : "offers"
+    Subject ||--o{ Grades : "evaluates"
+    Students ||--o{ GPA : "calculates"
+    Semesters ||--o{ GPA : "tracks"
+    
+    %% Composite Primary Key for GPA
+    GPA ||--|| Students : "StudentID"
+    GPA ||--|| Semesters : "SemesterID"
+```
+
