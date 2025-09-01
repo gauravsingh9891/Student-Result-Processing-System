@@ -1,5 +1,4 @@
 <h1 align="center">Student Result Processing System</h1>
-<h2 align="center">Comprehensive Project Report</h2> 
 
 ## Abstract
 The Student Result Processing System is a comprehensive SQL-based academic management solution designed to automate and streamline the process of calculating, storing, and reporting student grades and GPAs. The system implements advanced database concepts including stored procedures, triggers, window functions, and complex queries to provide real-time GPA calculations, automated ranking systems, and comprehensive result reporting. Built using Microsoft SQL Server 2022, the system demonstrates robust data validation, efficient grade processing, and flexible reporting capabilities suitable for educational institutions of various scales.
