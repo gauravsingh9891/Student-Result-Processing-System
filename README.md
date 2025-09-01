@@ -91,17 +91,13 @@ Key objectives achieved include:
    5) Can Show All Subjects of All Courses Available
    
    			Ex: - Execute SP_GetCourseSubject
-			
-   <b><i>SP_GetCourseSubject</i></b>
 
-   		Used for checking the statistic of Student Who is enrolled for a course given exam. This will required student id as input and
-   		tells you in which subject semester wise you are Pass or Fail based on there Grades points.
+
+   <b><i>SP_GetSemeterResult</i></b>
+
+   			Used for checking the statistic of Student Who is enrolled for a course given exam. This will take student id as input and
+   			tells you in which subject semester wise you are Pass or Fail based on there Grades points. It required only student ID.
    			Ex:- Execute SP_GetSemesterResult '2504000001'
-
-   <b><i>SP_GPA</i></b>
-
-   		used to View the GPA of a crossponding Student ID all semester wises. It requires Student ID
-   		Ex:- Execute SP_GPA '2504000001'
    
 3. **Grade Processing**: Created following procedure
 
@@ -116,18 +112,56 @@ Key objectives achieved include:
 
 ### Phase 3: GPA Calculation System
 1. **GPA Logic Implementation**: Developed credit-weighted GPA calculation formula 
-2. **Trigger Development**: Created Trg_UpdateGPA trigger for automatic GPA updates
-3. **GPA Reporting**: Implemented SP_GPA for semester-wise GPA display
-4. **Real-time Updates**: Ensured automatic GPA recalculation on grade changes
+2. **Trigger Development**: Created <b><i>Trg_UpdateGPA</i></b> trigger for automatic GPA updates
+3. **GPA Reporting**: Create following stored procedure for semester-wise GPA display
+
+   <b><i>SP_GPA</i></b>
+
+   		used to View the GPA of a crossponding Student ID all semester wises. It requires Student ID
+   		Ex:- Execute SP_GPA '2504000001'
+   
+5. **Real-time Updates**: Ensured automatic GPA recalculation on grade changes
 
 ### Phase 4: Advanced Reporting and Ranking
-1. **Ranking System**: Implemented SP_GetRank with 5 different ranking scenarios:
+1. **Ranking System**: Created following stored procedure with 5 different ranking scenarios:
    - Course-wise semester rankings
    - Overall semester rankings
    - Cumulative GPA rankings
    - Cross-course comparisons
-2. **Result Summaries**: Created SP_GetSemResultSummary for comprehensive reporting
-3. **Flexible Queries**: Developed SP_GetCourseSubject for various filtering options
+
+	<b><i>SP_GetRank</i></b>
+
+  		Used to find the rank based on GPA and Gross GPA. It requires Course ID, Semester Number, and IsRankGrossGPA='y'
+        to rank based on gross all semester rank between all course
+
+	i) Rank based on Course in all semester wise [By Passing Only Course Name as parameter]
+
+  		Ex:- Execute SP_GetRank 'BCA'
+
+   ii) Rank based on specific Course and semeter wise [By Passing Only Course Name and Semester as parameter]
+
+   		Ex:- Execute SP_GetRank 'BCA',1
+   
+  iii) Rank based on specific semeter for all courses of all students [By Passing Only Semester as parameter]
+
+  		Ex:- Execute SP_GetRank Null,1
+
+   iv) Rank Specific Course Students based on Average GPA in there particular course/programme [By Passing Course Name & in @IsRankGrossGPA value 'y'  as parameter]
+
+   		Ex:- Execute SP_GetRank 'BCA',Null,'y'
+
+   v) Rank All Course Students based on Average GPA in there particular course/programme [By Passing @IsRankGrossGPA value 'y'  as parameter]
+
+		Ex:- Execute SP_GetRank Null,Null,'y'
+  
+3. **Result Summaries**: Created SP_GetSemResultSummary for comprehensive reporting.
+
+	<b><i>SP_GetSemResultSummary</i><b>
+
+		used to get the result summary of all students of all course at a time. It will display Name of  Student, Student ID, Course Name,
+		Semester wise [Subject Name, Marks obtained, Grades, Grades Point, Result :Pass/Fail,GPA] for all student. It does not required any
+		parameter.
+  		Ex:- Execute SP_GetSemResultSummary
 
 ### Phase 5: Data Validation and Testing
 1. **Test Data Population**: Inserted comprehensive test data across all entities
