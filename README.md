@@ -37,7 +37,15 @@ Key objectives achieved include:
 - **Composite Indexes**: Performance optimization and data integrity
 
 ### Phase 1: Database Schema Design
-1. **Entity Analysis**: Identified core entities (Students, Programme, Semesters, Subject, Grades, GPA)
+1. **Entity Analysis**: Identified 6 core entities 
+
+         **Students** - Core student information
+         **Programme** - Academic programs/courses
+         **Semesters** - Academic semesters
+         **Subject** - Course subjects
+         **Grades** - Individual subject grades
+         **GPA** - Semester-wise GPA calculations
+
 2. **Schema Creation**: Implemented normalized database design with proper relationships
 3. **Constraint Implementation**: Added comprehensive validation rules including:
    - Age validation (students >15 years)
