@@ -5,6 +5,7 @@
   Required Parameters => Admission Year, Programme Name
   Returns => 10 Digit Enrollment Number
 */
+
 Create OR  Alter Procedure SP_GetEnrollmentNo
 @Admission_Year varchar(4),
 @Programme Varchar(10),
