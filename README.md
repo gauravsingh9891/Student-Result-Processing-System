@@ -18,18 +18,18 @@ Educational institutions face significant challenges in managing student academi
 ## 🛠️Tools Used
 
 ### Primary Technology Stack
-🗄️ **Microsoft SQL Server 2022**: Primary database management system
-🖥️ **SQL Server Management Studio (SSMS)**: Database development and management interface
-🧾 **Transact-SQL (T-SQL)**: Database programming language for stored procedures and triggers
+	🗄️ **Microsoft SQL Server 2022**: Primary database management system
+	🖥️ **SQL Server Management Studio (SSMS)**: Database development and management interface
+	🧾 **Transact-SQL (T-SQL)**: Database programming language for stored procedures and triggers
 
 ### Advanced SQL Features Implemented
-📦 **Stored Procedures**: 8 comprehensive procedures for business logic
-🔁 **Triggers**: Automatic GPA calculation and updates
-📐 **Window Functions**: Advanced ranking and analytical queries
-🔢 **Sequences**: Auto-generated identifiers
-🌀 **Cursors**: Complex data processing and reporting
-🔄 **MERGE Statements**: Efficient data synchronization
-🧮 **Composite Indexes**: Performance optimization and data integrity
+	📦 **Stored Procedures**: 8 comprehensive procedures for business logic
+	🔁 **Triggers**: Automatic GPA calculation and updates
+	📐 **Window Functions**: Advanced ranking and analytical queries
+	🔢 **Sequences**: Auto-generated identifiers
+	🌀 **Cursors**: Complex data processing and reporting
+	🔄 **MERGE Statements**: Efficient data synchronization
+	🧮 **Composite Indexes**: Performance optimization and data integrity
 
 ### Phase 1: Database Schema Design
 1. **Entity Analysis**: Identified 6 core entities 
