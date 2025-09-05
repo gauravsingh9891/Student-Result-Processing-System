@@ -30,11 +30,11 @@ Educational institutions face significant challenges in managing student academi
 - 🔁 **Cursors**: Complex data processing and reporting
 - 🔗 **MERGE Statements**: Efficient data synchronization
 - 📈 **Composite Indexes**: Performance optimization and data integrity
----
+
 ## 📊 Project Phases
 
 ### Phase 1: 📝 Database Schema Design
-1. **Entity Analysis**: Identified 6 core entities 
+1. 📋 **Entity Analysis**: Identified 6 core entities 
 
          Students - Core student information
          Programme - Academic programs/courses
@@ -43,15 +43,15 @@ Educational institutions face significant challenges in managing student academi
          Grades - Individual subject grades
          GPA - Semester-wise GPA calculations
 
-2. **Schema Creation**: Implemented normalized database design with proper relationships
-3. **Constraint Implementation**: Added comprehensive validation rules including:
+2. 🧾 **Schema Creation**: Implemented normalized database design with proper relationships
+3. 🛡️ **Constraint Implementation**: Added comprehensive validation rules including:
    - Age validation (students >15 years)
    - Gender validation (M/F/T)
    - Contact number format validation
    - Unique constraints to prevent duplicate grade entries
 
 ### Phase 2: 📋 Core Data Management
-1. **Student Management**: Created following Stored Procedures
+1. 👤 **Student Management**: Created following Stored Procedures
 
    <b><i>SP_GetEnrollmentNo</i></b>
 
@@ -108,7 +108,7 @@ Educational institutions face significant challenges in managing student academi
    			Ex:- Execute SP_GetSemesterResult '2504000001'
    	  <img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_GetSemesterResult%20Output.png?raw=true'>
 	  
-3. **Grade Processing**: Created following procedure
+3. 🧾 **Grade Processing**: Created following procedure
 
 	<b><i>SP_InsertGrade</i></b>
 
@@ -119,7 +119,7 @@ Educational institutions face significant challenges in managing student academi
 		Ex:- Execute SP_InsertGrade '2504000001','BCS-011',95
    	  <img src='https://github.com/gauravsingh9891/Student-Result-Processing-System/blob/main/Screenshot%20of%20Stored%20Procedure%20Execution%20Output/SP_InsertData%20into%20Grades%20Table%20output.png?raw=true'>	
 	  
-5. **Programme Management**: Established academic program structure with semester mapping
+5. 📚 **Programme Management**: Established academic program structure with semester mapping
 
 ### Phase 3: 🎯 GPA Calculation System
 1. **GPA Logic Implementation**: Developed credit-weighted GPA calculation formula 
