@@ -34,7 +34,7 @@ Educational institutions face significant challenges in managing student academi
 ## 📊 Project Phases
 
 ### Phase 1: 📝 Database Schema Design
-1. 📋 **Entity Analysis**: Identified 6 core entities 
+1. 📰 **Entity Analysis**: Identified 6 core entities 
 
          Students - Core student information
          Programme - Academic programs/courses
@@ -43,8 +43,8 @@ Educational institutions face significant challenges in managing student academi
          Grades - Individual subject grades
          GPA - Semester-wise GPA calculations
 
-2. 🧾 **Schema Creation**: Implemented normalized database design with proper relationships
-3. 🛡️ **Constraint Implementation**: Added comprehensive validation rules including:
+2. 📜 **Schema Creation**: Implemented normalized database design with proper relationships
+3. 🛡 **Constraint Implementation**: Added comprehensive validation rules including:
    - Age validation (students >15 years)
    - Gender validation (M/F/T)
    - Contact number format validation
